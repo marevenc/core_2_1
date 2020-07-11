@@ -1,6 +1,6 @@
 import java.util.function.*;
 
-public class Calculator<T extends Number> {
+public class Calculator {
     static Supplier<Calculator> instance = Calculator::new;
 
     BinaryOperator<Integer> plus = (x, y) -> x + y;
@@ -20,5 +20,5 @@ public class Calculator<T extends Number> {
 
     Predicate<Integer> isPositive = x -> x > 0;
 
-    Consumer<T> println = System.out::println;
+    Consumer<Number> println = System.out::println;
 }
